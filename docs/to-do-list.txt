@@ -1,0 +1,35 @@
+Notes on starting with Kafka:
+
+- Start with the white paper on kafka logs linkedIn
+- Start with kafka.apache.org
+- https://github.com/gwenshap/kafka-examples
+- https://github.com/apache/kafka
+- https://github.com/bkimminich/apache-kafka-book-examples
+
+Very good read schema registry:
+https://www.confluent.io/blog/schema-registry-kafka-stream-processing-yes-virginia-you-really-need-one/
+
+
+-- Need to do
+- Kafka avro consumer producer
+- kafka avro artifact registry c p
+- kafka streaming
+- kafka spark integration
+- kafka cassandra connect integration
+
+Read
+- avro
+- mvn
+- setup git
+- java log4j integrarion
+
+
+Project Idea:
+1. Write java code using cassandra api to write data into cassandra (data ingestion part)
+2. Write java code to push data to kafka topics (may need to use some cassandra kafka connector)
+3. Get events from kafka using spark stream (parse in object)
+4. Write into ES
+5. Push it to kabana (real time dashboard)
+
+generate scripts and docs to automate everything
+

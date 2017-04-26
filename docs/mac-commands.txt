@@ -1,0 +1,283 @@
+
+.vimrc
+github.com/mscoutermarsh/dotfiles
+github.com/thoughtbot/dotfiles
+$vimtutor
+screen casts
+vimcasts.org
+upcase.com/vim
+
+plugins:
+ctrl-p
+NerdTree
+Ag for vim
+
+install vundle(package manager) then nerdtree
+
+
+https://www.fprintf.net/vimCheatSheet.html#select
+----------------------vim-----------------------------------
+
+{motion}
+k – navigate upwards
+j – navigate downwards
+l – navigate right side
+h – navigate left side
+
+w (5w) – go to the next word.
+b (5b) – go to the previous (before) word.
+
+0 (g0) – go to the starting of the current line. (when line is wrapped - go to the start)
+$ (g$)– go to the end of the current line. (end of wrapped line)
+
+( - jumps to the previous sentence
+) - jumps to the next sentence
+{ - jumps to the previous paragraph
+} - jumps to the next paragraph
+
+ctrl+f – Jump forward one full screen.
+ctrl+b – Jump backwards one full screen
+Ctrl+y - Moves screen up one line
+Ctrl+e - Moves screen down one line
+
+H – Go to the first line of current screen.(Move cursor)
+M – Go to the middle line of current screen. (Move cursor)
+L – Go to the last line of current screen. (Move cursor)
+
+NG – Go to the Nth line of the file.
+gg – Go to the beginning of the file.
+G – Go to the end of the file.
+
+Undo/Redo/Repeat
+u - undo
+ctrl+r - redo
+.  - Repeat last change, with count replaced with [count].
+
+
+Searching
+/ - search pattern (Remove search pattern - :noh) no highlight
+n (N) - search next or backward
+
+:q! - quit without saving
+:wq! - quit and save
+:e {file} - edit file
+
+
+Inserting Text
+a (A) - Append text after the cursor [count] times. A - End of line
+i (I) - Insert text before the cursor [count] times. I - Start of line
+o - Begin a new line below the cursor and insert text, repeat [count] times.
+O - Begin a new line above the cursor and insert text, repeat [count] times
+
+
+{delete}
+x - Delete [count] characters under and after the cursor
+X - Delete [count] characters before the cursor
+d{motion} - Delete text that {motion} moves over
+dd - Delete [count] lines
+D - Delete the characters under the cursor until the end of the line
+{Visual}d - Delete the highlighted text (for {Visual} see Selecting Text).
+
+
+{Changing (or Replacing) Text}
+r{char}		- replace the character under the cursor with {char}.
+R			- Enter Insert mode, replacing characters rather than inserting
+~			- Switch case of the character under the cursor and move the cursor to the right. If a [count] is 					given, do that many characters.
+~{motion}	- switch case of {motion} text.
+{Visual}~	- Switch case of highlighted text
+
+
+Substituting
+Copying and Moving Text
+"{a-zA-Z0-9.%#:-"} - Use register {a-zA-Z0-9.%#:-"} for next delete, yank or put
+:reg - Display the contents of all numbered and named registers.
+:reg x -  Display the contents of the numbered and named registers that are mentioned in {arg}.
+["xy]{motion} - Yank {motion} text [into register x]. eg. "xy& 
+["x]yy	- Yank [count] line [into register x]
+{Visual}["x]y - Yank the highlighted text [into register x] (for {Visual} see Selecting Text).
+{Visual}["x]yy - Yank the highlighted lines [into register x]
+yiw – yank the current word (excluding surrounding whitespace)
+["x]p	Put the text [from register x] after the cursor [count] times.
+["x]P	Put the text [from register x] before the cursor [count] times.
+["x]gp	Just like "p", but leave the cursor just after the new text.
+["x]gP	Just like "P", but leave the cursor just after the new text.
+:[range]y[ank] [x]	Yank [range] lines [into register x]. eg. :81,91y<enter>
+
+
+{visual}
+v - visual mode
+	~  switch case
+	d  delete
+	c  change
+	y  yank
+	>  shift right 
+	<  shift left 
+	!  filter through external command 
+	=  filter through 'equalprg' option command 
+	gq  format lines to 'textwidth' length 
+------------------------------------------------------------
+
+
+--------------iterm2----------------------------------------
+
+comman + d = split vertically
+command + shift + d = split horizantally
+command + t = open a tab
+
+control + d =  will close the tab and panel
+command + shift + [ = move between tabs
+command + [ = move bewteen panes
+
+command + 1 = got to first tab (same in browser)
+command + shift + enter = takes the complete screen and take it back
+
+command + control + arrows = adjust size of pane
+command + option + arrow = move between panes
+
+ctrl+a - start of line on terminal
+ctrl+e - end of line on terminal
+
+control + u -> deletes everything before cursor
+control + k -> deletes after the cursor
+history (!125) - will run command at line 125 in history command
+!find
+control + r = reverse search start typing fin
+-----------------------------------
+
+
+Nerd tree
+
+:NERDTree ~/Documents?kafka/
+:NERDTreeClose   - Close the NERD tree in this tab.
+
+h j k l navigates around the document
+
+Lets open some windows
+s open new vertical split window
+i open new horizontal spilt window
+
+The next question I had was how do I switch back and forth between NERDTree and the other windows. All window commands start with ctrl+w
+
+ctrl+ww cycle though all windows
+crtl+wh takes you left a window
+crtl+wj takes you down a window
+crtl+wk takes you up a window
+crtl+wl takes you right a window
+Lets open some tabs
+t open new tab
+T open new tab while staying in current tab
+gt cycle though all tabs
+gT cycle though all tabs (moves to the left)
+
+
+brew install macvim --override-system-vim
+
+diw = delete in word
+caw = change all of the word with white space and put in insert mode
+cw = chnage the word after the cursor
+ci
+di] = delete inside of square bracket
+da] = ^^ plus delete the bracket - delete all bracket - u to undo
+yi] = copy everything inside []
+dt{space} = delete until the space - t= until
+df{space} = delete until the space + including space
+va" = visually select all incside "" including ""
+
+
+chsh -s $(which zsh)
+zsh --version
+echo $SHELL
+
+install oh-my-zsh on top of zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+
+
+Mac Terminal shortcuts
+
+fn + <- : top of page
+fn + -> : end of page
+fn + up : partial page up
+fn + down : partial page down
+
+option(alt) + left, right : move into the command
+option + mouse click : exact location
+
+control a,e : move left and right into the command
+
+
+control + up, down, left, right : move windows
+
+
+=========================
+control + r = the search for already typed command, press -> arrow key when found
+other wise keep pressing control + r for that same typed word
+
+touch file3 				-- create file
+vim file3   				-- open
+link -s file3 fileLink   	-- ls - fileLink -> file3
+head file3
+tail file3
+shutdown -r +60 			-- restart machine in 60 minutes
+poweroff
+htop						-- brew install htop-osx
+w or who 					-- who is logged in what are they doing
+top							-- manage proceses, what is using the most cpu time, get the PID and kill the process
+netstat -tupln				-- whats going on on networ, what ports are open, listening - tcp,udp, programs that are attached to that port(using it and listening) and numeric	- run as root user - sudo netstat -tupln
+
+STDIN --> 0
+STDOUT --> 1
+STDERR --> 2
+
+> will overwrite the file , >> will append the file
+echo "move this comment to file, not on screen" 1> somefile.txt
+or
+echo "move this comment to file, not on screen" > somefile.txt
+
+list the output of command into a file
+ls -lah somefile.txt >> listoutput.txt
+
+ps aux				-- list all the processes 
+ps aux | less		-- less will page thing and slowly go up and down the output
+
+cd /home/nfatepu && mvn clean package  	-- if first is true then run the second
+cut
+sort 
+uniq
+wc
+grep
+
+
+give extra then desired everysingle time
+study 60 minutes daily
+wake up 6 in the morning
+habit take 66 days
+get out of the bed, no matter what, keep alarm clock at distance
+no screen before going to bed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

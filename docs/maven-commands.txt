@@ -1,0 +1,14 @@
+
+-- Set up maven home
+export MAVEN_HOME="/Users/naman/Documents/maven/apache-maven-3.3.9"
+export PATH=$PATH:$MAVEN_HOME/bin
+
+-- maven commands
+mvn -v
+
+mvn archetype:generate -DgroupId=com.naman.examples.producer.avroclicks -DartifactId=AvroProducerExample -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+
+mvn archetype:generate -DgroupId=com.naman.examples.spark -DartifactId=starter-spark-examples -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+

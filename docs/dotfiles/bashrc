@@ -1,0 +1,32 @@
+# Setting PATH for Python 3.5 The orginal version is saved in .bash_profile.pysave
+export PY_HOME="/Library/Frameworks/Python.framework/Versions/3.5"
+export PATH=$PATH:$PY_HOME/bin
+export PATH
+
+# Setting Scala Home
+export SCALA_HOME="/Users/naman/Documents/setup/scala-2.11.8"
+export PATH=$PATH:$SCALA_HOME/bin
+export PATH
+
+# Setting Java Home
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export PATH=$JAVA_HOME:$PATH
+export PATH
+
+# Setting Maven home and path
+export M2_HOME="/Users/naman/Documents/setup/maven/apache-maven-3.3.9"
+export PATH=$PATH:$M2_HOME/bin
+export PATH
+
+# Open in Sublime Text 2
+sub() {
+  open $1 -a "Sublime Text 2"
+}
+
+# Source powerline
+if [ -f /Users/naman/Library/Python/3.5/lib/python/site-packages/powerline/bindings/bash/powerline.sh ]; then
+  source /Users/naman/Library/Python/3.5/lib/python/site-packages/powerline/bindings/bash/powerline.sh
+fi
+
+source ~/.aliases
+

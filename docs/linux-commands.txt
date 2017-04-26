@@ -1,0 +1,104 @@
+---- GREP ----
+
+Regular Expressions:
+- Anchors : Specify the position
+- Character Set : What is searched
+- Modifiers : Specify how many times previous char set is repeated
+
+Anchors
+^ beginning of line 
+$ end of line
+Note: if these are not placed at beginning or end, then they won't act as Anchors anymore.
+
+Note: grep returns all the lines which have respective pattern
+[123] - line that contains 1 or 2 or 3 (everything between square brackets is 1 Character)
+[0-9] - line contains any number
+[A-Za-z0-9] - specifies a range 
+use backslash \ like [\[] (search for [ )
+
+1.	grep -n 'work' filename.txt (all line which has work in it -n line number)
+	
+2.	grep -n ^'work' filename.txt	(all line with work at the beginning of line)
+	grep -n 'work'$ filename.txt 	(all line with work at the end of line)
+
+3.	!! -c (last Commands) -> grep -n ^'work' filename.txt -c (give the count of lines)
+
+Matching Character Set
+4 	grep -n 'th..' filename.txt (all lines with this, au thor, wi thou t)
+
+5 	grep ^'[ab]' filename.txt (lines that start with either a or b)
+  	grep ^'[ab][ab]' filename.txt (lines that start with either aa or ab or bb or ba)
+  	grep '[0-9]' filename (lines with atleast 1 Character)
+
+6 	grep -n '[0-9]\{4,8\}' filename (lines which has 4 to 8 times of [0-9])
+
+7. 	grep -n '\<work\>' filename (will give lines with word 'work')
+
+8. 	grep -n '\([a-z]\)\([a-z]\)[a-z]\2\1' filename (like radar)
+	anything between () will be remembered, and will be accessed by position \1 or \2
+
+-i ignore case
+-v exclude found pattern
+-e takes next Command as parameter
+-r search recurcively for files under specified directory
+-w search word only
+-c count the number of lines found
+--color the search pattern
+-n precedes each found line with the line number in file
+
+9.	grep -e -i filename (it will search for lines with -i on it)
+10.	grep -n -w 'work' filename (or grep -n '\<work\>' filename)
+
+
+-----SED-------
+sed can do everythinggrep does
+its parameter are seperated by /
+used for search and replace and much more
+
+sed 's/day/night/' oldfile > newfile (it will only replace the first occurance on each line) 
+s is for substitute,  day will be replaced with night , old file, the output new file
+echo sunday | sed 's/day/night/'
+
+sed 's/day/night/g' oldfile > newfile (g will replace globally, all the occurances)
+
+instead of / we can use _,:,\,|
+
+sed 's/[0-9]/&&/g' filename (if 2 is found replace it with 22, & remember the last result)
+sed 's/\([0-9]\)\([0-9]\)/\2\1/g' filename (replace  2 4 with 4 2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

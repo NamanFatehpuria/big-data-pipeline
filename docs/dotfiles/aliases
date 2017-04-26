@@ -1,0 +1,17 @@
+# Unix
+alias tlf="tail -f"
+alias mkdir='mkdir -p'
+alias ...='../..'
+alias l='ls'
+alias ll='ls -al'
+alias lh='ls -Alh'
+
+# git
+alias g='git'
+alias gs='git status -sb'
+
+# Config Files
+alias vimrc="vim ~/.vimrc"
+alias vimrcbundles="vim ~/.vimrc.bundles"
+
+alias v="vim"
