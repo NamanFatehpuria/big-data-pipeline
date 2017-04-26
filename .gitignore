@@ -7,3 +7,5 @@
 .DS_STORE
 docs/junk.md
 applications/learning-spark/target
+target/
+
