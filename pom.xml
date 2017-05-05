@@ -17,6 +17,7 @@
 
     <modules>
         <module>applications/data-ingestion-cassandra</module>
+        <module>applications/learning-kafka</module>
     </modules>
 
     <dependencies>
